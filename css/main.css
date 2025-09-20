@@ -1,0 +1,81 @@
+.banner {
+  background-image: url(../assets/images/banner-initial.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.banner .title {
+  max-width: 980px;
+  margin: auto;
+}
+
+.btn-default {
+  background-color: #e50914;
+  color: #ffffff;
+  padding: 1.25rem 2.25rem;
+  font-size: 1.55rem;
+}
+
+.btn-default:hover {
+  background-color: #b6060f;
+}
+
+.content-section {
+  position: relative;
+  margin-bottom: 3px;
+}
+
+.content-section::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #515C6F;
+  width: 100vw;
+  height: 3px;
+}
+
+.accordion {
+  --bs-accordion-btn-icon: url('../assets/images/add.svg');
+  --bs-accordion-btn-bg: #303030;
+  --bs-accordion-btn-color: #ffffff;
+  --bs-accordion-active-color: var(--bs-accordion-btn-color);
+  --bs-accordion-active-bg: var(--bs-accordion-btn-bg);
+  --bs-accordion-border-width: 5px;
+  --bs-accordion-border-color: black;
+  --bs-accordion-btn-padding-y: 1.5rem;
+}
+
+.accordion-button { 
+  font-size: 1.6rem;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: var(--bs-accordion-btn-icon);
+}
+
+.accordion-button.collapsed::after {
+  background-image: var(--bs-accordion-btn-icon);
+}
+
+footer {
+  color: #757575;
+}
+
+.text-limit {
+  max-width: 480px;
+}
+
+.content-section:first-child .text-limit {
+  max-width: 380px;
+}
+
+@media (max-width: 576px) {
+  .text-limit {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
