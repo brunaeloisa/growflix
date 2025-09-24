@@ -1,0 +1,85 @@
+@import url('./global.css');
+
+html {
+  scroll-behavior: smooth;
+}
+
+.banner {
+  background-image: url('../assets/images/growcast-01.png');
+  background-repeat: no-repeat;
+  background-position: 15% top;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 740px;
+}
+
+.play {
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 8px solid currentColor;
+}
+
+.section-title {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.section-title:hover {
+  color: #ff8534;
+  cursor: pointer;
+}
+
+.video {
+  transition: transform .5s ease-out;
+  transform-origin: left center;
+}
+
+.video-title {
+  color: #ffffff;
+  background-color: #000000;
+  line-height: 1.5;
+  display: none;
+  align-items: center;
+  gap: 12px;
+}
+
+.video:hover {
+  transform: translateY(-20px);
+  position: relative;
+  z-index: 20;
+}
+
+.video:hover .video-title {
+  display: flex;
+  position: absolute;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.video-title:hover {
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 576px) {
+  .video:hover {
+    scale: 1.12;
+  }
+
+  .video-title {
+    align-items: flex-start;
+    font-size: .9rem;
+  }
+}

@@ -1,0 +1,20 @@
+.content-section {
+  position: relative;
+  margin-bottom: 3px;
+}
+
+.content-section::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #515C6F;
+  width: 100vw;
+  height: 3px;
+  z-index: -1;
+}
+
+footer {
+  color: #757575;
+}

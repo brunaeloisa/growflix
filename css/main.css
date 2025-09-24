@@ -1,3 +1,5 @@
+@import url('./global.css');
+
 .banner {
   background-image: url(../assets/images/banner-initial.png);
   background-repeat: no-repeat;
@@ -22,20 +24,12 @@
   background-color: #b6060f;
 }
 
-.content-section {
-  position: relative;
-  margin-bottom: 3px;
+.text-limit {
+  max-width: 480px;
 }
 
-.content-section::after {
-  content: '';
-  position: absolute;
-  bottom: -3px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #515C6F;
-  width: 100vw;
-  height: 3px;
+.content-section:first-child .text-limit {
+  max-width: 380px;
 }
 
 .accordion {
@@ -59,18 +53,6 @@
 
 .accordion-button.collapsed::after {
   background-image: var(--bs-accordion-btn-icon);
-}
-
-footer {
-  color: #757575;
-}
-
-.text-limit {
-  max-width: 480px;
-}
-
-.content-section:first-child .text-limit {
-  max-width: 380px;
 }
 
 @media (max-width: 576px) {
