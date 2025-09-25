@@ -51,7 +51,7 @@
             <div class="col-12 text-white py-5 px-md-4">
               <span class="small fw-bold">PODCAST</span>
               <h1 class="display-1 fw-bold mb-3">GROWCAST</h1>
-              <button class="btn btn-light d-flex align-items-center gap-2 px-3">
+              <button id="watch-button" class="btn btn-light d-flex align-items-center gap-2 px-3">
                 <div class="play"></div>
                 <span class="fw-bold">Assistir</span>
               </button>
@@ -75,7 +75,7 @@
 
     <section id="webinar" class="row pt-5">
       <a href="#webinar" class="d-flex gap-2 align-items-center section-title">
-        <h2 class="fw-bold fs-5">Webinar Flutter</h2>
+        <h2 class="fw-bold fs-5">Webinar em Flutter</h2>
         <div class="play"></div>
       </a>
       <!-- JS generated content -->
@@ -141,6 +141,22 @@
       </div>
     </div>
   </footer>
+
+  <!-- Modal -->
+  <div class="modal fade" id="video-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true" data-bs-theme="dark">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header p-4">
+          <button type="button" class="btn-close fs-4" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div id="video-player" class="ratio ratio-21x9">
+            <!-- JS generated content -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="./assets/libs/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
   <script type="module" src="./js/home.js"></script>

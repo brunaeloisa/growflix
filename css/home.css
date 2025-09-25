@@ -34,9 +34,17 @@ html {
   cursor: pointer;
 }
 
+/* LISTA DE VÍDEOS */
+
 .video {
   transition: transform .5s ease-out;
   transform-origin: left center;
+}
+
+.video:hover {
+  transform: translateY(-20px);
+  position: relative;
+  z-index: 20;
 }
 
 .video-title {
@@ -48,10 +56,13 @@ html {
   gap: 12px;
 }
 
-.video:hover {
-  transform: translateY(-20px);
-  position: relative;
-  z-index: 20;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .video:hover .video-title {
@@ -64,14 +75,26 @@ html {
   cursor: pointer;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+/* MODAL */
+
+.modal-fullscreen .modal-content {
+  overflow-y: auto;
+  max-height: 100vh;
 }
+
+.modal-fullscreen .modal-body {
+  overflow-y: visible;
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.modal-content {
+  background: none;
+}
+
+/* MEDIA QUERY */
 
 @media (min-width: 576px) {
   .video:hover {
